@@ -50,6 +50,7 @@ def BruteForceClosestPair(Array):
     for i in range(len(Array)):
         for j in range(i + 1, len(Array)):
             d = Euclidean_Distance(Array[i], Array[j])
+            print(f"Comparando {Array[i]} y {Array[j]}: distancia = {d:.4f}")
             if d < min_distance:
                 min_distance = d
                 Target_Pair = (Array[i], Array[j])
@@ -82,10 +83,11 @@ def Closest_Pair(Px, Py):
     for i in range(len(Sy)):
         for j in range(i+1, min(i + 7, len(Sy))):
             d = Euclidean_Distance(Sy[i], Sy[j])
+            print(f"Comparando {Sy[i]} y {Sy[j]}: distancia = {d:.4f}")
             if d < min_distance:
                 min_distance = d
                 best_pair = (Sy[i], Sy[j])
-
+            
     return min_distance, best_pair[0], best_pair[1]
 
 # Ejecutar
